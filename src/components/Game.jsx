@@ -7,7 +7,7 @@ export const GameBoard = () => {
   const initialArr = Array.from({ length: 25 }, (_, i) => i + 1);
   const [table, setTable] = useState(initialArr);
   const [counter, setCounter] = useState(1);
-  const [misses, setMisses] = useState(0);
+  const [missedNumber, setMissedNumbers] = useState(0);
   const [isStarted, setIsStarted] = useState(false);
   const [isResults, setIsResults] = useState(false);
   const { time, start, pause, reset } = useTimer();
@@ -23,7 +23,7 @@ export const GameBoard = () => {
     start();
     setIsResults(false);
     setIsStarted(true);
-    setMisses(0);
+    setMissedNumbers(0);
     sortTable();
   };
 
@@ -40,9 +40,6 @@ export const GameBoard = () => {
     setTable(shuffled);
   };
 
-  const insertMiddleEl = () => {
-    table.splice(12, 0, '👁');
-  };
 
   const replaceElement = (el) => {
     const index = table.indexOf(el);
@@ -55,7 +52,7 @@ export const GameBoard = () => {
       setCounter(counter + 1);
       replaceElement(attempt);
     } else {
-      setMisses(misses + 1);
+      setMissedNumbers(missedNumber + 1);
     }
   };
 
@@ -92,7 +89,7 @@ export const GameBoard = () => {
         <>
           <h3>Great Job!</h3>
           <p>Game finished in: {time} seconds</p>
-          <p>Total missed numbers: {misses} </p>
+          <p>Total missed numbers: {missedNumber} </p>
         </>
       )}
     </div>
