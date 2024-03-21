@@ -1,0 +1,70 @@
+.Game {
+  max-width: 1100px;
+  margin: 45px auto 50px auto;
+}
+
+.Table {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-wrap: wrap;
+  max-width: 450px;
+  flex-wrap: wrap;
+  margin: 0 auto;
+}
+
+.elementRemoved,
+.elementAwaited {
+  border: 1px solid #090ca8;
+  width: 65px;
+  height: 65px;
+  font-size: 20px;
+  padding: 5px;
+  line-height: 3.5;
+  transition: all 0.3s;
+  cursor: pointer;
+}
+.elementRemoved,
+.elementAwaited:hover {
+  background-color: #e2a113;
+}
+
+.elementRemoved {
+  background-color: #dfbb9d;
+}
+
+.elementAwaited {
+  background-color: #ece7e8;
+}
+
+.Timer {
+  margin-top: 60px;
+  font-size: 18px;
+  text-align: center;
+  justify-content: center;
+}
+
+.Button {
+  margin-bottom: 30px;
+  padding: 10px 35px;
+  font-size: 20px;
+  background-color: #ebe7f0;
+  border-radius: 5px;
+  color: rgb(78, 13, 231);
+  border: none;
+  transition: all 0.3s;
+  cursor: pointer;
+}
+
+.ButtonDisabled {
+  margin-bottom: 30px;
+  padding: 10px 35px;
+  font-size: 20px;
+  background-color: #e2dfe7;
+  border-radius: 5px;
+  color: rgb(44, 2, 2);
+  border: none;
+  transition: all 0.3s;
+  cursor: not-allowed;
+  opacity: 0.5;
+}
